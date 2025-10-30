@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Setup Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            color: #667eea;
+        }
+        
+        .logo h1 {
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .status {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .status h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .steps {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
+        .code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+            margin-top: 20px;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .credentials {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .credentials h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .credentials p {
+            font-family: monospace;
+            font-size: 1.1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 16h3a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3m-6 12H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3"/>
+                <rect x="7" y="3" width="10" height="18" rx="1"/>
+            </svg>
+            <h1>ShopHub</h1>
+        </div>
+        
+        <div class="status">
+            <h2>🚀 Your E-Commerce Platform is Almost Ready!</h2>
+            <p>Both frontend and backend servers are running. You just need to set up MongoDB to see products.</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🛍️</div>
+                <strong>Shopping Cart</strong>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💳</div>
+                <strong>Secure Checkout</strong>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📦</div>
+                <strong>Order Tracking</strong>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👤</div>
+                <strong>User Accounts</strong>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <strong>Dark/Light Mode</strong>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <strong>Responsive Design</strong>
+            </div>
+        </div>
+        
+        <div class="steps">
+            <h2 style="margin-bottom: 20px;">⚙️ Setup MongoDB in 3 Steps</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Install MongoDB</h3>
+                    <p>Choose your preferred method:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>MongoDB Community Server</strong> - Download from mongodb.com</li>
+                        <li><strong>Docker</strong> - Quick containerized setup</li>
+                        <li><strong>MongoDB Atlas</strong> - Free cloud database</li>
+                    </ul>
+                    <p style="margin-top: 10px;">📚 See <strong>MONGODB_SETUP.md</strong> for detailed instructions</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Run the Seed Script</h3>
+                    <p>Once MongoDB is running, populate the database with sample data:</p>
+                    <div class="code">cd backend<br>npm run seed</div>
+                    <p>Or use the automated script:</p>
+                    <div class="code">.\start.ps1</div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Refresh and Shop!</h3>
+                    <p>After seeding, refresh your browser and you'll see:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>✅ 15 Products across 5 categories</li>
+                        <li>✅ High-quality product images</li>
+                        <li>✅ Admin account ready to use</li>
+                        <li>✅ All features fully functional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="credentials">
+            <h3>🔐 Admin Credentials</h3>
+            <p><strong>Email:</strong> admin@example.com</p>
+            <p><strong>Password:</strong> admin123</p>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="http://localhost:5173" class="button">Open ShopHub →</a>
+        </div>
+        
+        <div style="margin-top: 30px; text-align: center; color: #666;">
+            <p>💡 <strong>Tip:</strong> Check out FEATURES_GUIDE.md for a complete list of all features!</p>
+        </div>
+    </div>
+</body>
+</html>
