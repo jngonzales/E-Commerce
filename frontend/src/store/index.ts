@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { User, Cart, CartItem } from '../types';
+import { User, Cart } from '../types';
 import api from '../lib/api';
 
 interface AuthState {
@@ -55,7 +55,7 @@ export const useAuthStore = create<AuthState>()(
   )
 );
 
-export const useCartStore = create<CartState>()((set, get) => ({
+export const useCartStore = create<CartState>()((set) => ({
   cart: null,
   isLoading: false,
 
