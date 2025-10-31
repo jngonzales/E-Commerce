@@ -20,7 +20,11 @@ A modern, production-ready e-commerce platform built with the MERN stack, featur
 
 ## 📸 Screenshots
 
-> *Add your screenshots here after deployment*
+### 🌐 Live Demo
+**Frontend:** https://e-commerce-psi-three-61.vercel.app  
+**Backend API:** https://bikehub-backend-hfw7.onrender.com/api/v1
+
+> *Add screenshots of your live site here*
 
 ---
 
@@ -41,7 +45,7 @@ A modern, production-ready e-commerce platform built with the MERN stack, featur
 
 ### 🎨 **Modern UI/UX**
 - **Responsive Design**: Mobile-first design that works on all devices
-- **Dark/Light Theme**: Toggle between dark and light modes
+- **Dark Mode Default**: Sleek dark theme with light mode option
 - **Smooth Animations**: Professional transitions and loading states
 - **Intuitive Navigation**: Easy-to-use shop dropdown and category filters
 
@@ -66,7 +70,12 @@ A modern, production-ready e-commerce platform built with the MERN stack, featur
 ## 🎯 Demo
 
 ### Live Site
-> 🌐 **[View Live Demo](https://your-deployed-site.vercel.app)** *(Add after deployment)*
+> 🌐 **[View Live Demo](https://e-commerce-psi-three-61.vercel.app)**
+
+### API Endpoint
+```
+https://bikehub-backend-hfw7.onrender.com/api/v1
+```
 
 ### Test Credentials
 ```
@@ -175,7 +184,7 @@ Before you begin, ensure you have:
    
    Create `frontend/.env`:
    ```env
-   VITE_API_URL=http://localhost:5000
+   VITE_API_URL=http://localhost:5000/api/v1
    ```
 
 ### Database Seeding
@@ -260,7 +269,7 @@ E-Commerce/
 ### Base URL
 ```
 Development: http://localhost:5000/api/v1
-Production: https://your-api.onrender.com/api/v1
+Production: https://bikehub-backend-hfw7.onrender.com/api/v1
 ```
 
 ### Endpoints
