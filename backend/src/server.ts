@@ -68,9 +68,28 @@ app.use('/api/v1/', limiter);
 // Data sanitization against NoSQL injection
 app.use(mongoSanitize());
 
-// CORS
+// CORS - Allow multiple origins
+const allowedOrigins: string[] = [
+  process.env.FRONTEND_URL || '',
+  'http://localhost:5173',
+  'http://localhost:3000',
+].filter(origin => origin.length > 0);
+
+logger.info(`CORS configured for origins: ${allowedOrigins.join(', ')}`);
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      logger.warn(`CORS blocked request from origin: ${origin}`);
+      logger.info(`Allowed origins: ${allowedOrigins.join(', ')}`);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
 }));
 
